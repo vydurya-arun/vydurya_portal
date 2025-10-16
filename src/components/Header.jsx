@@ -23,7 +23,9 @@ const Header = () => {
                 <button className="bg-secondary h-8 px-5 text-white">Try it!</button>
             </div>
             <div className="flex flex-row items-center justify-between h-18 gap-14 ">
-                <div className="pl-8 text-3xl font-black cursor-pointer text-secondary" onClick={()=> navigate("/")}>Vydurya</div>
+                <div className="pl-8 text-3xl font-black cursor-pointer text-secondary" onClick={()=> navigate("/")}>
+                    <img src="/images/logo2.png" alt="logo" className="w-50"/>
+                </div>
                 <ul className="flex flex-row flex-1 gap-6 text-lg">
                     {navItems.map((item,index)=>(
                         
