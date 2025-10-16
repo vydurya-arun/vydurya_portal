@@ -1,1 +1,25 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-background: var(--background);
+  --font-gnsans: var(--gnsans)
+}
+ 
+:root {
+  --primary: oklch(0.7074 0.1479 233.95);
+  --secondary: oklch(0.239 0.0463 227.39);
+  --background:oklch(0.9646 0.0206 219.68);
+  --gnsans:"DM Sans", sans-serif;
+  
+}
+
+
+@layer base{
+  body {
+    @apply bg-background font-gnsans;
+  }
+}
