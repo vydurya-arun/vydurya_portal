@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import { ChevronDown } from "lucide-react";
 
 const Footer = () => {
-  const isMobile = useMediaQuery({ maxWidth: 930 }); // sm breakpoint in Tailwind
+  const isMobile = useMediaQuery({ maxWidth: 930 }); 
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleDropdown = (id) => {
@@ -18,11 +18,11 @@ const Footer = () => {
         {mainLinks.map((item) => (
           <li
             key={item.id}
-            className="w-full sm:w-[45%] md:w-[30%] lg:w-auto border-b sm:border-none border-gray-700 pb-2"
+            className="w-full sm:w-[45%] md:w-[30%] lg:w-auto border-b sm:border-none border-gray-700 pb-2 "
           >
             {/* Header (clickable on mobile) */}
             <div
-              className="flex justify-between items-center cursor-pointer sm:cursor-default"
+              className="flex justify-between items-center cursor-pointer sm:cursor-default "
               onClick={() => isMobile && toggleDropdown(item.id)}
             >
               <h3 className="text-lg md:text-xl font-semibold text-primary mb-2 sm:mb-0">
@@ -36,7 +36,7 @@ const Footer = () => {
                     openDropdown === item.id ? "rotate-180" : "rotate-0"
                   }`}
                 >
-                  <ChevronDown />
+                  <ChevronDown className=""/>
                 </span>
               )}
             </div>
