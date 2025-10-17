@@ -70,7 +70,7 @@ const Header = () => {
 
             {/* mobile navbar */}
             {menuOpen && (
-                <div className="bg-white px-5 py-4">
+                <div className={`${isScrolled? "bg-background":"bg-white"} px-5 py-4`}>
                     <ul className="flex-col  gap-6  flex">
                         {navItems.map((item, index) => (
                             <li key={item.id}>
