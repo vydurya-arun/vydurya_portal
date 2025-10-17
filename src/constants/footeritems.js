@@ -46,6 +46,11 @@ export const payments = [
     imagepath: "/icons/visa.svg",
     title: "visa",
   },
+  {
+    id: 5,
+    imagepath: "/icons/jcb.svg",
+    title: "jcb",
+  },
 ];
 
 export const mainLinks = [
@@ -60,7 +65,6 @@ export const mainLinks = [
       { id: 5, title: "Business email", urlpath: "/" },
       { id: 6, title: "Cloud hosting", urlpath: "/" },
       { id: 7, title: "Hosting for WooCommerce", urlpath: "/" },
-      { id: 8, title: "Hosting for agencies", urlpath: "/" },
 
     ],
   },
