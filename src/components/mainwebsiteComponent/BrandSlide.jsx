@@ -88,35 +88,7 @@ const BrandSlide = () => {
       window.addEventListener('resize', handleResize);
     }
 
-    // Pause on hover for better UX
-    const handleMouseEnter = () => {
-      if (animationRef.current) {
-        animationRef.current.pause();
-      }
-    };
-
-    const handleMouseLeave = () => {
-      if (animationRef.current) {
-        animationRef.current.play();
-      }
-    };
-
-    track.addEventListener('mouseenter', handleMouseEnter);
-    track.addEventListener('mouseleave', handleMouseLeave);
-
-    // Cleanup
-    return () => {
-      if (animationRef.current) {
-        animationRef.current.kill();
-      }
-      if (resizeObserver) {
-        resizeObserver.disconnect();
-      } else {
-        window.removeEventListener('resize', handleResize);
-      }
-      track.removeEventListener('mouseenter', handleMouseEnter);
-      track.removeEventListener('mouseleave', handleMouseLeave);
-    };
+   
   }, []);
 
   return (
