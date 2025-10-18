@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonV1 from '../components/ButtonV1'
 
 const HomePage = () => {
   return (
@@ -7,7 +8,7 @@ const HomePage = () => {
         <h1 className='text-7xl '>Quality Websites at Affordable Rates</h1>
         <p className='w-[76%]'>Transform your digital footprint into an unforgettable experience, where every click leads to meaningful connections</p>
         <div className='flex flex-row gap-4'>
-          <button className='h-12 bg-secondary text-background px-3 font-semibold'>Get start for free</button>
+          <ButtonV1/>
           <button className='h-12 text-secondary border-1 border-secondary px-3 font-semibold'>Contact sales</button>
 
         </div>
