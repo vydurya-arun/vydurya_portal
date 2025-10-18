@@ -3,6 +3,7 @@ import { navItems } from "../constants/navItems";
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronDown, Menu } from "lucide-react";
 import { useMediaQuery } from "react-responsive";
+import Dashbtn from "./Dashbtn";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -63,9 +64,7 @@ const Header = () => {
                         </li>
                     ))}
                 </ul>
-                <div className="hidden md:flex bg-secondary text-background h-full w-36 items-center justify-center text-sm lg:text-lg">
-                    Dashboard
-                </div>
+                <Dashbtn/>
             </div>
 
 

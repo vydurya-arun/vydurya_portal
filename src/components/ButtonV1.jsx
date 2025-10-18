@@ -8,16 +8,25 @@ const ButtonV1 = () => {
   useGSAP(() => {
     const btn = buttonRef.current;
     const overlay = btn.querySelector(".overlay");
+    const text = btn.querySelector(".btn-text");
 
     // Initially position overlay off-screen (left)
     gsap.set(overlay, { xPercent: -100 });
 
     const tl = gsap.timeline({ paused: true });
     tl.to(overlay, {
-      xPercent: 0, // slide overlay to fill button
+      xPercent: 0,
       duration: 0.5,
       ease: "power2.out",
-    });
+    }).to(
+      text,
+      {
+        color: "var(--color-secondary)",
+        duration: 0.3,
+        ease: "power2.out",
+      },
+      "<" // start at same time as overlay animation
+    );
 
     const onEnter = () => tl.play();
     const onLeave = () => tl.reverse();
@@ -36,7 +45,7 @@ const ButtonV1 = () => {
       ref={buttonRef}
       className="relative overflow-hidden h-12 px-3 text-background bg-secondary"
     >
-      <span className="relative z-10">Get start for free</span>
+      <span className="btn-text relative z-10 font-semibold">Get start for free</span>
       <span className="overlay absolute inset-0 bg-primary"></span>
     </button>
   );
