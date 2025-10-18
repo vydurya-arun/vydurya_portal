@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
 
-const ButtonV1 = () => {
+const ButtonV1 = ({content,classname}) => {
   const buttonRef = useRef(null);
 
   useGSAP(() => {
@@ -43,9 +43,9 @@ const ButtonV1 = () => {
   return (
     <button
       ref={buttonRef}
-      className="relative overflow-hidden h-12 px-3 text-background bg-secondary"
+      className={`${classname} relative overflow-hidden px-3 text-background bg-secondary`}
     >
-      <span className="btn-text relative z-10 font-semibold">Get start for free</span>
+      <span className="btn-text relative z-10 font-semibold">{content}</span>
       <span className="overlay absolute inset-0 bg-primary"></span>
     </button>
   );

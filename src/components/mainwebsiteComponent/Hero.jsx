@@ -12,7 +12,7 @@ const Hero = () => {
           where every click leads to meaningful connections
         </p>
         <div className="flex flex-row gap-4">
-          <ButtonV1 />
+          <ButtonV1 content="Get start for free" classname="h-12"/>
           <ButtonV2 />
         </div>
       </div>
