@@ -39,7 +39,7 @@ const ButtonV2 = () => {
   },[])
 
   return (
-    <button ref={buttonRef} className='relative overflow-hidden h-12 text-secondary border-1 border-secondary px-3 font-semibold'>
+    <button ref={buttonRef} className='relative overflow-hidden h-12 w-40 text-secondary border-1 border-secondary px-3 font-semibold'>
       <span className='relative z-10 text-btn'>Contact sales</span>
       <span className='absolute overlay inset-0 bg-secondary'></span>
     </button>
