@@ -14,17 +14,17 @@ const Features = () => {
         },
         {
             id: 2,
-            buttonText: "website builder", 
-            title: "Make your website in minutes",
-            description: "Just describe your idea – AI Website Builder will create your layout, images, and text. Then use the drag-and-drop editor to customize. Whether it's an online store or a blog, you'll be live in moments.",
-            linkText: "Create with Website Builder"
+            buttonText: "Quick-start WordPress", 
+            title: "WordPress without the complexity",
+            description: "Create a WordPress site with AI, use a pre-built template, or start from scratch. While we take care of site maintenance, speed, and security for you.",
+            linkText: "Build a WordPress site"
         },
         {
             id: 3,
-            buttonText: "website builder",
-            title: "Make your website in minutes", 
-            description: "Just describe your idea – AI Website Builder will create your layout, images, and text. Then use the drag-and-drop editor to customize. Whether it's an online store or a blog, you'll be live in moments.",
-            linkText: "Create with Website Builder"
+            buttonText: "Hostinger Horizons",
+            title: "Shape your vision with AI", 
+            description: "Turn your words into a new website or web app with Hostinger Horizons. All it takes is a simple AI prompt. No code, no technical jargon – instant results.",
+            linkText: "Explore Hostinger Horizons"
         }
     ];
 

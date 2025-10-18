@@ -4,62 +4,118 @@ import { branditems } from "../../constants/branditems";
 
 const BrandSlide = () => {
   const trackRef = useRef(null);
-  const ctxRef = useRef(null);
+  const animationRef = useRef(null);
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
 
-    const fullWidth = track.scrollWidth;
-    const oneLoopWidth = fullWidth / 2 || fullWidth; // fallback
+    // Function to initialize animation
+    const initAnimation = () => {
+      // Clear existing animation
+      if (animationRef.current) {
+        animationRef.current.kill();
+        animationRef.current = null;
+      }
 
-    // kill previous context if any
-    if (ctxRef.current) {
-      ctxRef.current.revert();
-      ctxRef.current = null;
-    }
+      const trackWidth = track.scrollWidth;
+      const firstSetWidth = trackWidth / 2;
+      
+      // Reset position before starting new animation
+      gsap.set(track, { x: 0 });
 
-    // Create GSAP context for safe scoping with React
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
+      // Create seamless loop animation
+      animationRef.current = gsap.to(track, {
+        x: -firstSetWidth,
+        duration: 40, // Adjust speed as needed
+        ease: "none",
         repeat: -1,
-        defaults: { ease: "none" }
-      });
-
-      tl.to(track, {
-        x: -oneLoopWidth,
-        duration: 20, // adjust speed
         modifiers: {
-          x: (x) => {
-            // keep x in range so it seamlessly loops
-            const num = parseFloat(x);
-            return `${(num % oneLoopWidth)}px`;
-          }
+          x: gsap.utils.unitize(x => {
+            const xNum = parseFloat(x);
+            // Reset position when first set moves completely out of view
+            if (xNum <= -firstSetWidth) {
+              return "0px";
+            }
+            return x;
+          })
+        },
+        onRepeat: () => {
+          // Force reset to prevent cumulative errors
+          gsap.set(track, { x: 0 });
         }
-      });
-
-      // store timeline so we can kill on cleanup
-      ctxRef.current = {
-        revert: () => {
-          tl.kill();
-        }
-      };
-    }, track);
-
-    // handle resize to recalc widths and restart animation
-    const onResize = () => {
-      if (ctxRef.current) ctxRef.current.revert();
-      requestAnimationFrame(() => {
-
       });
     };
 
-    window.addEventListener("resize", onResize);
+    // Alternative approach using more reliable method
+    const initAnimationV2 = () => {
+      if (animationRef.current) {
+        animationRef.current.kill();
+      }
 
+      const firstSetWidth = track.scrollWidth / 2;
+      
+      animationRef.current = gsap.to(track, {
+        x: -firstSetWidth,
+        duration: 40,
+        ease: "none",
+        repeat: -1,
+        onRepeat: () => {
+          // Jump back to start instantly for seamless loop
+          gsap.set(track, { x: 0 });
+        }
+      });
+    };
+
+    // Use the more reliable V2 approach
+    initAnimationV2();
+
+    // Handle resize - restart animation with new dimensions
+    const handleResize = () => {
+      // Debounce resize handler
+      setTimeout(initAnimationV2, 100);
+    };
+
+    // Use ResizeObserver for better resize handling
+    let resizeObserver;
+    if (typeof ResizeObserver !== 'undefined') {
+      resizeObserver = new ResizeObserver(() => {
+        handleResize();
+      });
+      resizeObserver.observe(track);
+    } else {
+      // Fallback to window resize
+      window.addEventListener('resize', handleResize);
+    }
+
+    // Pause on hover for better UX
+    const handleMouseEnter = () => {
+      if (animationRef.current) {
+        animationRef.current.pause();
+      }
+    };
+
+    const handleMouseLeave = () => {
+      if (animationRef.current) {
+        animationRef.current.play();
+      }
+    };
+
+    track.addEventListener('mouseenter', handleMouseEnter);
+    track.addEventListener('mouseleave', handleMouseLeave);
+
+    // Cleanup
     return () => {
-      // cleanup
-      if (ctxRef.current) ctxRef.current.revert();
-      window.removeEventListener("resize", onResize);
+      if (animationRef.current) {
+        animationRef.current.kill();
+      }
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      } else {
+        window.removeEventListener('resize', handleResize);
+      }
+      track.removeEventListener('mouseenter', handleMouseEnter);
+      track.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
 
@@ -70,29 +126,33 @@ const BrandSlide = () => {
       </h1>
 
       <div className="relative w-full overflow-hidden">
-        {/* track contains two copies of branditems for seamless loop */}
         <div
           ref={trackRef}
           className="flex flex-row items-center gap-16 px-10 flex-nowrap"
-          style={{ whiteSpace: "nowrap" }}
+          style={{ 
+            whiteSpace: "nowrap",
+            width: "fit-content" // Ensure proper width calculation
+          }}
         >
-          {/** first set */}
+          {/* First set */}
           {branditems.map((item) => (
             <img
               key={`a-${item.id}`}
               src={item.imageUrl}
               alt={item.title}
               className="w-32 h-20 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
+              loading="lazy"
             />
           ))}
-
-          {/** duplicated set */}
+          
+          {/* Duplicated set for seamless loop */}
           {branditems.map((item) => (
             <img
               key={`b-${item.id}`}
               src={item.imageUrl}
               alt={item.title}
               className="w-32 h-20 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
+              loading="lazy"
             />
           ))}
         </div>
