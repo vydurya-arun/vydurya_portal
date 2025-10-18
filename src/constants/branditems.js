@@ -8,5 +8,7 @@ export const branditems = [
     {id:4, imageUrl:"/images/Dell Technologies.png", title:"Dell Technologies"},
     {id:5, imageUrl:"/images/Saudi Aramco.png", title:"Saudi Aramco"},
     {id:6, imageUrl:"/images/Meta.png", title:"Meta"},
+    {id:7, imageUrl:"/images/IBM.png", title:"IBM"},
+    {id:8, imageUrl:"/images/Tesla.png", title:"Tesla"},
     
 ]
