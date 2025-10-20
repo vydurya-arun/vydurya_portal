@@ -3,12 +3,14 @@ import { navItems } from "../constants/navItems";
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronDown, Menu } from "lucide-react";
 import { useMediaQuery } from "react-responsive";
+import Dashbtn from "./Dashbtn";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const navigate = useNavigate();
+
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -20,7 +22,7 @@ const Header = () => {
         <div
             className={`${isScrolled
                     ? "fixed top-0 left-0 w-full h-20 bg-background z-50 "
-                    : "relative z-50 h-20 md:h-30 bg-white"
+                    : "relative z-50 h-20 md:h-30 bg-background"
                 }`}
         >
             <div
@@ -34,9 +36,9 @@ const Header = () => {
                     Try it!
                 </button>
             </div>
-            <div className="flex flex-row items-center justify-between h-20 gap-0 md:gap-14">
+            <div className="flex flex-row items-center justify-between h-20 gap-0 md:gap-14 border-b-1">
                 <Menu
-                    className="w-16 md:hidden"
+                    className="w-16 md:hidden text-secondary"
                     onClick={() => setMenuOpen(!menuOpen)}
                     aria-label="Toggle mobile menu"
                 />
@@ -62,16 +64,14 @@ const Header = () => {
                         </li>
                     ))}
                 </ul>
-                <div className="hidden md:flex bg-secondary text-white h-full w-36 items-center justify-center text-sm lg:text-lg">
-                    Dashboard
-                </div>
+                <Dashbtn/>
             </div>
-            <div className="bg-black h-[.5px]"></div>
+
 
             {/* mobile navbar */}
             {menuOpen && (
-                <div className={`${isScrolled? "bg-background":"bg-white"} px-5 py-4`}>
-                    <ul className="flex-col  gap-6  flex">
+                <div className={`bg-background border-b-1 border-gray-600`}>
+                    <ul className="flex-col gap-6 flex px-6 py-3">
                         {navItems.map((item, index) => (
                             <li key={item.id}>
                                 <Link to={item.path} className="flex items-center text-base " onClick={()=> setMenuOpen(false)}>
@@ -83,6 +83,9 @@ const Header = () => {
                             </li>
                         ))}
                     </ul>
+                    <div className={`text-background w-full bg-secondary h-12 flex justify-center items-center text-lg font-semibold`}>
+                        Dashboard
+                    </div>
                 </div>
             )}
         </div>
