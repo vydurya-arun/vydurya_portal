@@ -9,14 +9,14 @@ export const navItems = [
     },
     {
         id:2,
-        path:"/pricing",
-        navTitle:"Pricing",
+        path:"/domain",
+        navTitle:"Domains",
         navicon:false
     },
     {
         id:3,
-        path:"/company",
-        navTitle:"Company",
+        path:"/pricing",
+        navTitle:"Pricing",
         navicon:false
     },
     {

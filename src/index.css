@@ -5,6 +5,7 @@
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-secondary_lite: var(--secondary_lite);
   --color-background: var(--background);
   --color-secondary-dim: var(--secondary-dim);
   --font-gnsans: var(--gnsans)
@@ -13,6 +14,7 @@
 :root {
   --primary: oklch(0.7074 0.1479 233.95);
   --secondary: oklch(0.239 0.0463 227.39);
+  --secondary_lite: oklch(0.2832 0.0436 225.66);
   --background:oklch(0.9646 0.0206 219.68);
   --secondary-dim:oklch(0.7189 0.0174 221.15);
   --gnsans:"DM Sans", sans-serif;

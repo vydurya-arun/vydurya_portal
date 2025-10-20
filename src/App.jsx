@@ -4,6 +4,7 @@ import MainLayout from './Layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import ServicePage from './pages/ServicePage'
 import PricingPage from './pages/PricingPage'
+import DomainPage from './pages/DomainPage'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/' element={<HomePage/>}/>
         <Route path='/service' element={<ServicePage/>}/>
         <Route path='/pricing' element={<PricingPage/>}/>
+        <Route path='/domain' element={<DomainPage/>}/>
         <Route path="*" element={<Navigate to="/" replace />} />
 
       </Route>
