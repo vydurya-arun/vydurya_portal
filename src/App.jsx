@@ -4,7 +4,7 @@ import MainLayout from './Layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import ServicePage from './pages/ServicePage'
 import PricingPage from './pages/PricingPage'
-import DomainPage from './pages/DomainPage'
+import DomainPage from './pages/domainPages/DomainPage'
 
 const App = () => {
   return (

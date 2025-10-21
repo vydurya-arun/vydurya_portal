@@ -1,10 +1,10 @@
-import React from "react";
-import ButtonV1 from "../components/ButtonV1";
+
+import ButtonV1 from "../../components/ButtonV1";
 import { CircleAlert, Search, Star } from "lucide-react";
 
-const DomainPage = () => {
-    return (
-        <div className="flex flex-col items-center mx-15">
+const DomainSearchPage = () => {
+  return (
+            <div className="flex flex-col items-center mx-15">
             <h1 className="text-4xl font-medium mt-13 mb-3 w-[40%] text-center">
                 Domain name search – buy a domain in minutes
             </h1>
@@ -72,7 +72,7 @@ const DomainPage = () => {
                 </div>
             </div>
         </div>
-    );
-};
+  )
+}
 
-export default DomainPage;
+export default DomainSearchPage
