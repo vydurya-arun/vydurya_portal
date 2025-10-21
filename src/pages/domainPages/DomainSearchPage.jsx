@@ -3,8 +3,8 @@ import ButtonV1 from "../../components/ButtonV1";
 import { CircleAlert, Search, Star } from "lucide-react";
 
 const DomainSearchPage = () => {
-  return (
-            <div className="flex flex-col items-center mx-15">
+    return (
+        <div className="flex flex-col items-center mx-15">
             <h1 className="text-4xl font-medium mt-13 mb-3 w-[40%] text-center">
                 Domain name search – buy a domain in minutes
             </h1>
@@ -33,15 +33,15 @@ const DomainSearchPage = () => {
             <div className="w-[80%] my-6">
                 <h2 className="text-start font-semibold">More option</h2>
                 <div className="flex gap-2 my-3">
-                    <button className="flex justify-center items-center gap-1 border-[1px] border-primary rounded-full px-2 py-1 text-primary"><Star className="w-4 "/>popular</button>
-                    <button className="flex justify-center items-center gap-1 border-[1px] border-primary rounded-full px-2 py-1 text-primary"><Star className="w-4 "/>popular</button>
+                    <button className="flex justify-center items-center gap-1 border-[1px] border-primary rounded-full px-2 py-1 text-primary"><Star className="w-4 " />popular</button>
+                    <button className="flex justify-center items-center gap-1 border-[1px] border-primary rounded-full px-2 py-1 text-primary"><Star className="w-4 " />popular</button>
                 </div>
             </div>
 
             <div className="w-[80%] flex items-center justify-between h-17 px-3 border-b-[1px] hover:border-[1px] border-primary bg-background hover:bg-[#BFF2FF] transition duration-300 ease-in mb-4">
                 <div className="flex items-center gap-2">
                     <p className="font-semibold text-lg">codevero.tech</p>
-                    <div className="bg-red-500 text-white rounded-full px-2 py-1">Save 80%</div>
+                    <div className="bg-pink-600 text-white rounded-full px-2 py-1">Save 80%</div>
                 </div>
                 <div className="flex items-center gap-2">
                     <p className="text-xs text-gray-800 line-through">US$ 6.99/1st yr</p>
@@ -72,7 +72,7 @@ const DomainSearchPage = () => {
                 </div>
             </div>
         </div>
-  )
+    )
 }
 
 export default DomainSearchPage

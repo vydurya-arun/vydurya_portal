@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import ServicePage from './pages/ServicePage'
 import PricingPage from './pages/PricingPage'
 import DomainPage from './pages/domainPages/DomainPage'
+import DomainSearchPage from './pages/domainPages/DomainSearchPage'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path='/service' element={<ServicePage/>}/>
         <Route path='/pricing' element={<PricingPage/>}/>
         <Route path='/domain' element={<DomainPage/>}/>
+        <Route path='/domain-search' element={<DomainSearchPage/>}/>
         <Route path="*" element={<Navigate to="/" replace />} />
 
       </Route>
