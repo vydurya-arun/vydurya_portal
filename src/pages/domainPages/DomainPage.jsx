@@ -125,6 +125,10 @@ const DomainPage = () => {
         </div>
       </div>
 
+      <div>
+        <h1>Domain name search FAQs</h1>
+      </div>
+
     </div>
 
   );

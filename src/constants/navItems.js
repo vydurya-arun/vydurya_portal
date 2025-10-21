@@ -25,10 +25,5 @@ export const navItems = [
         navTitle:"Support",
         navicon:true
     },
-    {
-        id:5,
-        path:"/contact",
-        navTitle:"Contact",
-        navicon:false
-    },
+
 ]
