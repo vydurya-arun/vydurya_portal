@@ -4,7 +4,7 @@ import PixelBlast from "../../components/ui/PixelBlast";
 const DomainPage = () => {
   return (
     <div>
-      <div className="w-full h-[40vh] relative bg-secondary mb-8">
+      <div className="w-full h-[50vh] relative bg-secondary mb-8">
         <PixelBlast
           variant="square"
           pixelSize={5}

@@ -324,7 +324,7 @@ const ScrollStack = ({
 
   const containerClassName = useWindowScroll
     ? `relative w-full ${className}`.trim()
-    : `relative w-full h-full overflow-y-auto overflow-x-visible ${className}`.trim();
+    : `relative w-full h-full overflow-y-hidden overflow-x-visible ${className}`.trim();
 
   return (
     <div className={containerClassName} ref={scrollerRef} style={containerStyles}>

@@ -33,7 +33,7 @@ const Features = () => {
   ];
 
   return (
-    <div className=" space-y-8 h-[80vh] overflow-y-hidden mb-10">
+    <div className="space-y-8 h-[80vh] mb-10">
       <ScrollStack
         itemDistance={500}
         itemStackDistance={0}
