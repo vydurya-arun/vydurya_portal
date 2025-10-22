@@ -8,6 +8,7 @@
   --color-secondary_lite: var(--secondary_lite);
   --color-background: var(--background);
   --color-secondary-dim: var(--secondary-dim);
+  --color-secondary-light: var(--secondary-light);
   --font-gnsans: var(--gnsans)
 }
  
@@ -17,6 +18,7 @@
   --secondary_lite: oklch(0.2832 0.0436 225.66);
   --background:oklch(0.9646 0.0206 219.68);
   --secondary-dim:oklch(0.7189 0.0174 221.15);
+  --secondary-light:oklch(0.2348 0.0041 264.49);
   --gnsans:"DM Sans", sans-serif;
   
 }

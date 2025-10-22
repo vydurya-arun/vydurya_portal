@@ -1,0 +1,52 @@
+<svg width="1440" height="509" viewBox="0 0 1440 509" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_101_5)">
+<rect width="1440" height="509" fill="#0D0D0D"/>
+<rect y="469" width="40" height="40" fill="#00AEEE"/>
+<rect y="429" width="40" height="40" fill="#5EDFFF"/>
+<rect x="40" y="429" width="40" height="40" fill="#00AEEE"/>
+<rect y="389" width="40" height="40" fill="#00AEEE"/>
+<rect x="40" y="389" width="40" height="40" fill="#5EDFFF"/>
+<rect x="40" y="349" width="40" height="40" fill="#00AEEE"/>
+<rect x="80" y="349" width="40" height="40" fill="#00AEEE"/>
+<rect x="40" y="309" width="40" height="40" fill="#00AEEE"/>
+<rect y="269" width="40" height="40" fill="#00AEEE"/>
+<rect y="309" width="40" height="40" fill="#5EDFFF"/>
+<rect width="40" height="40" fill="#00AEEE"/>
+<rect y="40" width="40" height="40" fill="#5EDFFF"/>
+<rect y="80" width="40" height="40" fill="#00AEEE"/>
+<rect x="40" y="120" width="40" height="40" fill="#5EDFFF"/>
+<rect y="155" width="40" height="40" fill="#00AEEE"/>
+<rect y="195" width="40" height="40" fill="#00AEEE"/>
+<rect x="40" y="195" width="40" height="40" fill="#00AEEE"/>
+<rect x="80" y="235" width="40" height="40" fill="#5EDFFF"/>
+<rect y="235" width="40" height="40" fill="#5EDFFF"/>
+<rect x="80" y="80" width="40" height="40" fill="#00AEEE"/>
+<rect x="40" y="40" width="40" height="40" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 469)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 429)" fill="#5EDFFF"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1400 429)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 389)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1400 389)" fill="#5EDFFF"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1400 349)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1360 349)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1400 309)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 269)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 309)" fill="#5EDFFF"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 0)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 40)" fill="#5EDFFF"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 80)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1400 120)" fill="#5EDFFF"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 155)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 195)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1400 195)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1360 235)" fill="#5EDFFF"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1440 235)" fill="#5EDFFF"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1360 80)" fill="#00AEEE"/>
+<rect width="40" height="40" transform="matrix(-1 0 0 1 1400 40)" fill="#00AEEE"/>
+</g>
+<defs>
+<clipPath id="clip0_101_5">
+<rect width="1440" height="509" fill="white"/>
+</clipPath>
+</defs>
+</svg>

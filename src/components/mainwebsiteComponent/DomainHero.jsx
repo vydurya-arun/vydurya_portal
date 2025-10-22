@@ -10,7 +10,7 @@ const DomainHero = () => {
 
   return (
     <div className="relative">
-      <div className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[65vh] bg-secondary mb-6 sm:mb-8">
+      <div className="w-full h-[60vh] sm:h-[50vh] md:h-[60vh] lg:h-[65vh] bg-secondary mb-6 sm:mb-8">
         <PixelBlast
           variant="square"
           pixelSize={5}
@@ -61,7 +61,7 @@ const DomainHero = () => {
           </div>
 
           {/* Domain Prices */}
-          <div className="flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mt-2 hidden md:flex">
+          <div className="flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mt-2 flex">
             {domainprice.map((item) => {
               const { domain, discount, price } = item.price[0];
               return (
