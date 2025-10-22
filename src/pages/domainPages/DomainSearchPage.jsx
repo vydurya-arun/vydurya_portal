@@ -5,8 +5,8 @@ import { CircleAlert, Search, Star } from "lucide-react";
 const DomainSearchPage = () => {
     return (
         <div className="flex flex-col items-center mx-15">
-            <h1 className="text-4xl font-medium mt-13 mb-3 w-[40%] text-center">
-                Domain name search – buy a domain in minutes
+            <h1 className="text-5xl text-secondary font-bold mt-13 mb-3 w-[40%] text-center">
+                Domain name search buy a domain in minutes
             </h1>
 
             <div className="flex flex-col w-full items-center gap-4 my-6">
