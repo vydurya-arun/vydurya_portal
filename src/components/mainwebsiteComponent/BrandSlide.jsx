@@ -94,7 +94,7 @@ const BrandSlide = () => {
   return (
     <div className="relative overflow-hidden my-10 flex flex-col items-center justify-center py-10 space-y-6 border-y border-secondary-dim">
 
-      <h1 className="text-4xl text-center font-medium ">Trusted by ambitious teams and product builders</h1>
+      <h1 className="text-xl  md:text-3xl lg:text-4xl text-center font-medium ">Trusted by ambitious teams and product builders</h1>
 
       <div className="relative w-full overflow-hidden">
         <div
