@@ -70,7 +70,7 @@ const Header = () => {
 
             {/* mobile navbar */}
             {menuOpen && (
-                <div className={`bg-background border-b-1 border-gray-600`}>
+                <div className={`bg-background border-b-1 border-gray-600 md:hidden`}>
                     <ul className="flex-col gap-6 flex px-6 py-3">
                         {navItems.map((item, index) => (
                             <li key={item.id}>
@@ -84,7 +84,7 @@ const Header = () => {
                         ))}
                     </ul>
                     <div className={`text-background w-full bg-secondary h-12 flex justify-center items-center text-lg font-semibold`}>
-                        Dashboard
+                        Contact
                     </div>
                 </div>
             )}

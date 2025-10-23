@@ -48,7 +48,7 @@ const Dashbtn = () => {
       ref={buttonref}
       className="relative overflow-hidden hidden md:flex bg-secondary text-background h-full w-36 items-center justify-center text-sm lg:text-lg"
     >
-      <span className="btn-text relative z-10">Dashboard</span>
+      <span className="btn-text relative z-10">Contact</span>
       <span className="overlay absolute inset-0 bg-primary"></span>
     </div>
   );
