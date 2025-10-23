@@ -84,7 +84,7 @@ const Header = () => {
             )}
 
             {/* Main navbar */}
-            <div className="flex flex-row items-center justify-between h-20 md:h-20 border-b border-gray-200 px-3 md:pl-10">
+            <div className="flex flex-row items-center justify-between h-20 md:h-20 border-b border-secondary px-3 md:pl-10 md:pr-0">
                 {/* Mobile Menu Icon */}
             
                 <Menu
@@ -129,6 +129,9 @@ const Header = () => {
 
                 {/* Dashboard Button */}
                 <Dashbtn />
+            </div>
+            <div className="">
+                arun kumar
             </div>
 
             {/* Mobile Navbar */}
