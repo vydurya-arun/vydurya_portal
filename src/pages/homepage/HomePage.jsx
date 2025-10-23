@@ -11,7 +11,7 @@ const HomePage = () => {
     <>
       <Hero />
       <BrandSlide />
-      <Features/>
+      <NewFeature/>
       <PricingCard/>
     </>
   );

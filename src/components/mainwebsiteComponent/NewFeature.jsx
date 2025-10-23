@@ -29,9 +29,9 @@ const NewFeature = () => {
     ];
 
     return (
-        <div className="my-10 mx-4 md:mx-8 lg:mx-15 space-y-8 lg:space-y-4">
+        <div className="my-10 mx-4 md:mx-8 lg:mx-15 space-y-8 lg:space-y-4 ">
             {features.map((feature) => (
-                <div key={feature.id} className="flex flex-col lg:flex-row justify-between items-center w-full gap-6 lg:gap-0">
+                <div key={feature.id} className="flex flex-col lg:flex-row justify-between items-center w-full gap-6 lg:gap-0 sticky top-20 bg-background">
                     <img 
                         src="/images/websitePrew.png" 
                         alt="Website preview" 
