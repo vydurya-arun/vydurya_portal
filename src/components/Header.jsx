@@ -63,6 +63,9 @@ const Header = () => {
                             </Link>
                         </li>
                     ))}
+                    <li>
+                        <a href="https://vyduryadigital.com/" target="blank" className="flex items-center text-sm lg:text-lg">Company</a>
+                    </li>
                 </ul>
                 <Dashbtn/>
             </div>
@@ -82,6 +85,9 @@ const Header = () => {
                                 </Link>
                             </li>
                         ))}
+                        <li>
+                            <a href="https://vyduryadigital.com/" target="blank" className="flex items-center text-base " onClick={()=> setMenuOpen(false)}>Company</a>
+                        </li>
                     </ul>
                     <div className={`text-background w-full bg-secondary h-12 flex justify-center items-center text-lg font-semibold`}>
                         Contact
