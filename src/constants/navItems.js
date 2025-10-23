@@ -5,7 +5,11 @@ export const navItems = [
         id:1,
         path:"/service",
         navTitle:"Services",
-        navicon:true
+        navicon:true,
+        dropdown:[
+            {id:1,mainTitle:"Domain Services",sublinks:["/domaintransfer","/bulkdomain","/domainbulktransfer"],title:["Domain transfer","Bulk domain","Domain bulk transfer"]},
+            {id:2,mainTitle:"Domain Services",sublinks:["/domaintransfer","/bulkdomain","/domainbulktransfer"],title:["Domain transfer","Bulk domain","Domain bulk transfer"]}
+        ]
     },
     {
         id:2,

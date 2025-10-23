@@ -8,6 +8,7 @@ import Dashbtn from "./Dashbtn";
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [dropOpen, setDropOpen] = useState(false);
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const navigate = useNavigate();
     const menuRef = useRef(null);
@@ -84,9 +85,9 @@ const Header = () => {
             )}
 
             {/* Main navbar */}
-            <div className="flex flex-row items-center justify-between h-20 md:h-20 border-b border-secondary px-3 md:pl-10 md:pr-0">
+            <div className="relative flex flex-row items-center justify-between h-20 md:h-20 border-b border-secondary px-3 md:pl-10 md:pr-0">
                 {/* Mobile Menu Icon */}
-            
+
                 <Menu
                     ref={menuButtonRef}
                     className="w-8 h-8 md:hidden text-secondary cursor-pointer"
@@ -106,13 +107,49 @@ const Header = () => {
                 <ul className="hidden md:flex flex-row flex-1 justify-center gap-6 text-lg">
                     {navItems.map((item) => (
                         <li key={item.id}>
-                            <Link
-                                to={item.path}
-                                className="flex items-center text-sm lg:text-lg hover:text-primary transition-colors"
-                            >
-                                {item.navTitle}
-                                {item.navicon && <ChevronDown className="w-4 h-4 ml-1" />}
-                            </Link>
+                            {item.navicon ? (
+                                <button
+                                    onClick={() => setDropOpen(!dropOpen)}
+                                    className="flex items-center text-sm lg:text-lg hover:text-primary transition-colors"
+                                >
+                                    {item.navTitle}
+                                    {item.navicon && (
+                                        <ChevronDown
+                                            className={`${dropOpen ? "rotate-180" : ""} w-4 h-4 ml-1`}
+                                        />
+                                    )}
+                                </button>
+                            ) : (
+                                <Link
+                                    to={item.path}
+                                    className="flex items-center text-sm lg:text-lg hover:text-primary transition-colors"
+                                >
+                                    {item.navTitle}
+                                </Link>
+                            )}
+
+                            {dropOpen && item.dropdown && item.dropdown.length > 0 && (
+                                <div className={`absolute top-full mt-1 left-1/2 -translate-x-1/2 min-w-[30%] bg-background border border-secondary shadow-lg py-3 z-50 grid `} style={{ gridTemplateColumns: `repeat(${item.dropdown.length}, minmax(0, 1fr))` }}>
+                                    {item.dropdown.map((group) => (
+                                        
+                                            <div  key={group.id}>
+                                                <h1 className="px-4 text-base font-bold">{group.mainTitle}</h1>
+                                                <div key={group.id} className="px-4">
+                                                    {group.sublinks.map((link, index) => (
+                                                        <Link
+                                                            key={link}
+                                                            to={link}
+                                                            className="block text-sm text-secondary hover:text-primary transition-colors py-1"
+                                                        >
+                                                            {group.title[index]}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        
+                                    ))}
+                                </div>
+                            )}
                         </li>
                     ))}
                     <li>
@@ -129,9 +166,6 @@ const Header = () => {
 
                 {/* Dashboard Button */}
                 <Dashbtn />
-            </div>
-            <div className="">
-                arun kumar
             </div>
 
             {/* Mobile Navbar */}
