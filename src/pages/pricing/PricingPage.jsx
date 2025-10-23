@@ -24,9 +24,9 @@ const PricingPage = () => {
             Cancel anytime
           </li>
         </ul>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 my-6 sm:my-8 md:my-10 w-full max-w-6xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 my-6 px-3 sm:my-8 md:my-10 w-full max-w-6xl">
           {/* Domain Card 1 */}
-          <ul className="flex flex-col border-[1px] border-gray-500 rounded-lg px-3 sm:px-4 py-3 sm:py-4 space-y-2 sm:space-y-5 w-full">
+          <ul className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 mt-9 flex flex-col border-[1px] border-gray-500 rounded-lg px-3 sm:px-4 py-3 sm:py-4 space-y-2 sm:space-y-5 w-full">
             <div className="bg-pink-600 text-white rounded-full px-2 py-1 text-xs w-fit ">
               Save 80%
             </div>
@@ -58,39 +58,45 @@ const PricingPage = () => {
           </ul>
 
           {/* Domain Card 2 */}
-          <ul className="flex flex-col border-[1px] border-gray-500 rounded-lg px-3 sm:px-4 py-3 sm:py-4 space-y-2 sm:space-y-5 w-full">
-            <div className="bg-pink-600 text-white rounded-full px-2 py-1 text-xs w-fit ">
-              Save 80%
-            </div>
-            <div>
-              <h2 className="text-xl font-bold">Premium</h2>
-              <p className="text-sm">Everything you need to get started</p>
-            </div>
+          <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 bg-primary rounded-lg flex flex-col justify-between pt-2">
+            <p className="text-center font-semibold text-secondary">MOST POPULAR</p>
+            <ul className="flex bg-background flex-col border-[2px] border-primary rounded-lg px-3 sm:px-4 py-3 sm:py-4 space-y-2 sm:space-y-5 w-full">
+              <div className="bg-pink-600 text-white rounded-full px-2 py-1 text-xs w-fit ">
+                Save 80%
+              </div>
+              <div>
+                <h2 className="text-xl font-bold">Premium</h2>
+                <p className="text-sm">Everything you need to get started</p>
+              </div>
 
-            <div>
-              <p className="text-sm text-gray-800 line-through">US$ 12.19</p>
-              <p className="text-lg">
-                US$<span className="text-3xl font-semibold">2.49</span>/mo
+              <div>
+                <p className="text-sm text-gray-800 line-through">US$ 12.19</p>
+                <p className="text-lg">
+                  US$<span className="text-3xl font-semibold">2.49</span>/mo
+                </p>
+                <p className="text-xl font-bold text-[#008BBE]">+3 months free</p>
+              </div>
+
+              <div className="bg-primary/20 rounded-md text-[#008BBE] flex justify-center items-center">
+                Limited time deal
+              </div>
+
+              <button className=" text-white bg-black/90 hover:bg-black/80 transition duration-300 ease-in-out w-full rounded-lg h-10 sm:h-12 text-base sm:text-lg md:text-md font-semibold">
+                Choose plan
+              </button>
+              <p className="text-gray-500 text-xs">
+                Get 48 months for US$ 119.52 (regular price US$ 585.12). Renews at
+                US$ 10.99/mo.
               </p>
-              <p className="text-xl font-bold text-[#008BBE]">+3 months free</p>
-            </div>
+              <div className="h-[1px] bg-gray-600"></div>
+            </ul>
 
-            <div className="bg-primary/20 rounded-md text-[#008BBE] flex justify-center items-center">
-              Limited time deal
-            </div>
 
-            <button className=" outline-1 outline-black/80 text-black/80  w-full rounded-lg h-10 sm:h-12 text-base sm:text-lg md:text-md font-semibold">
-              Choose plan
-            </button>
-            <p className="text-gray-500 text-xs">
-              Get 48 months for US$ 119.52 (regular price US$ 585.12). Renews at
-              US$ 10.99/mo.
-            </p>
-            <div className="h-[1px] bg-gray-600"></div>
-          </ul>
+          </div>
+
 
           {/* Domain Card 3 */}
-          <ul className="flex flex-col border-[1px] border-gray-500 rounded-lg px-3 sm:px-4 py-3 sm:py-4 space-y-2 sm:space-y-5 w-full">
+          <ul className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 mt-9 flex flex-col border-[1px] border-gray-500 rounded-lg px-3 sm:px-4 py-3 sm:py-4 space-y-2 sm:space-y-5 w-full">
             <div className="bg-pink-600 text-white rounded-full px-2 py-1 text-xs w-fit ">
               Save 80%
             </div>
