@@ -46,11 +46,11 @@ const pricingCards = [
   },
 ];
 
-const PricingCard = () => {
+const PricingCard = ({mainTitle}) => {
   return (
     <div className="flex flex-col items-center">
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#00465F] text-center my-8">
-        Web hosting
+        {mainTitle}
       </h1>
       <ul className="flex flex-row text-xs md:text-sm px-3 gap-3 justify-center">
         {features.map((feature, index) => (

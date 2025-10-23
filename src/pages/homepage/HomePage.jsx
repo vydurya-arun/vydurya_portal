@@ -11,7 +11,7 @@ const HomePage = () => {
       <Hero />
       <BrandSlide />
       <NewFeature/>
-      <PricingCard/>
+      <PricingCard mainTitle="Prices & Plans"/>
     </>
   );
 };

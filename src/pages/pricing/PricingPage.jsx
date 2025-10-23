@@ -9,7 +9,7 @@ const PricingPage = () => {
   return (
     <div className="flex flex-col items-center">
       <PricingHero />
-      <PricingCard/>
+      <PricingCard mainTitle="Web hosting"/>
 
     </div>
   );
